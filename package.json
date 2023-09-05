@@ -1,0 +1,14 @@
+{
+  "name": "tgswebsite",
+  "version": "1.0.0",
+  "description": "The Golden Stitch. Crochting webite where you will find handmade products, tutorial, lessons, and learn about Melissa Geoghegan, founder of The Golden Stitch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Melissa Geoghegan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
