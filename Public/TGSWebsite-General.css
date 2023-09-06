@@ -19,10 +19,46 @@ nav a {
     padding: 17px;
     margin: 30px;
     color: black;
-    font-size: 20px;                                               
+    font-size: 20px;
+    font-family: 'Times New Roman';                                               
 }
 
 nav a:hover {
     background-color: goldenrod;
     color: black;
+}
+.tutorial {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: goldenrod;
+}
+.thead {
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+.tstep {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.tdesc {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+}
+#filter {
+    margin-bottom: 15px;
+    margin-top: 16px;
+    margin-left: 50px;
+}
+.tags {
+    text-align: center;
+    font-weight: bold;
 }
