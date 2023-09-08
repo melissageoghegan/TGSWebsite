@@ -1,5 +1,7 @@
-const express=require("express");
-const app= express();
+const express = require("express");
+const fileupload = require("express-fileupload");
+const app = express();
+app.use(fileupload());
 app.use(express.static(__dirname+"/Public"));
 app.listen(3000, function() {
     console.log('Server running on port 3000');

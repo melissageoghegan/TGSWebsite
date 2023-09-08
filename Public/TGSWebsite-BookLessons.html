@@ -6,7 +6,7 @@
     <script src="https://kit.fontawesome.com/00f185a0b6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
 </head>
-
+<body>
 <header>
     <img src="\Resources\Logo PNG-01.png" alt="business logo made up of a ball of yarn, wings, and crochet hooks to look like the golden snitch from Harry Potter" id="logo">
     <nav>
@@ -16,58 +16,47 @@
         <a href="./TGSWebsite-AboutMe.html">About Me</a>
     </nav>
 </header>
-<body>
-    <h1 id="cmhead">Contact me</h1>
+<main>
+    <h1 class="MainHeadings">Contact me</h1>
     <div id="booking">
         <form id="contact">
             <fieldset id="ContactForm">
                 <legend>Please fill out your details <br> and I'll get back to you ASAP</legend>
                     <i class="fa-solid fa-id-card" style="color: #daa520;"></i>
                     <label for="FirstName">First Name</label>
-                    <input type="text" id="FirstName"><br>
+                    <input type="text" id="FirstName" autocomplete="given-name"><br>
                     <i class="fa-solid fa-id-card" style="color: #daa520;"></i>
                     <label for="LastName">Last Name</label>
-                    <input type="text" id="LastName"><br>
+                    <input type="text" id="LastName" autocomplete="family-name"><br>
                     <i class="fa-solid fa-mobile-screen-button" style="color: #daa520;"></i>
                     <label for="PhoneNumber">Phone Number</label>
-                    <input type="tel" id="PhoneNumber"><br>
+                    <input type="tel" id="PhoneNumber" autocomplete="tel">
+                    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+<script src="/TGSWebsite-BookLessons.js"></script>
+<br>
                     <i class="fa-regular fa-envelope" style="color: #daa520;"></i>
                     <label for="email">Email</label>
-                    <input type="email" id="email">
-                </fieldset>
-                <br>
-                <fieldset id="ContactMethod">
-                    <legend>Preferred method of contact</legend>
-                        <i class="fa-regular fa-envelope" style="color: #daa520;"></i>
-                        <label for="EmailCheckbox">Email</label>
-                        <input type="checkbox" id="EmailCheckbox">
-                        <i class="fa-solid fa-comment-sms" style="color: #daa520;"></i>
-                        <label for="SMSCheckbox">SMS</label>
-                        <input type="checkbox" id="SMSCheckbox">
-                        <i class="fa-brands fa-whatsapp" style="color: #daa520;"></i>
-                        <label for="WhatsAppCheckbox">WhatsApp</label>
-                        <input type="checkbox" id="WhatsAppCheckbox">
-                </fieldset>
-            </form>
-            <div class="calendly-inline-widget" data-url="https://calendly.com/melissageoghegan95?hide_gdpr_banner=1&primary_color=daa520" style="min-width:320px;height:505px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <input type="email" id="email" autocomplete="email">
+            </fieldset>
+            <br>
+            <fieldset id="ContactMethod">
+                <legend>Preferred method of contact</legend>
+                    <i class="fa-regular fa-envelope" style="color: #daa520;"></i>
+                    <label for="EmailCheckbox">Email</label>
+                    <input type="checkbox" id="EmailCheckbox">
+                    <i class="fa-brands fa-whatsapp" style="color: #daa520;"></i>
+                    <label for="WhatsAppCheckbox">WhatsApp</label>
+                    <input type="checkbox" id="WhatsAppCheckbox">
+            </fieldset>
+        </form>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/melissageoghegan95?hide_gdpr_banner=1&primary_color=daa520" style="min-width:320px;height:505px;">
+        </div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async>   </script>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
-    <script>
-        const input = document.querySelector("#PhoneNumber");
-        window.intlTelInput(input, {
-          utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
-          customContainer: "PhoneNumber",
-          initialCountry: "auto",
-            geoIpLookup: function(callback) {
-            fetch("https://ipapi.co/json")
-            .then(function(res) { return res.json(); })
-            .then(function(data) { callback(data.country_code); })
-            .catch(function() { callback("us"); });
-        }});
-      </script>
-</body>
+    
+</main>
 <footer>
 
 </footer>
+</body>
 </html>

@@ -30,39 +30,9 @@ nav a:hover {
     background-color: goldenrod;
     color: black;
 }
-.tutorial {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-    border: 4px solid goldenrod;
-}
-.thead, #cmhead{
-    font-family: 'Times New Roman';
-    font-weight: bold;
+.MainHeadings {
+    text-align: center;
     font-size: 30px;
-    text-align: center;
-}
-.tstep {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    font-weight: bold;
-    font-family: 'Times New Roman';
-}
-.tdesc {
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 10px;
-    font-family: 'Times New Roman';
-}
-#filter {
-    margin-bottom: 15px;
-    margin-top: 16px;
-    margin-left: 50px;
-}
-.tags {
-    text-align: center;
     font-weight: bold;
 }
 #booking {
@@ -105,7 +75,7 @@ legend {
 #email {
     width: 300px;
 }
-#EmailCheckbox, #SMSCheckbox {
+#EmailCheckbox {
     margin-right: 20px;
 }
 #ContactMethod {
@@ -130,8 +100,9 @@ i {
 .images {
     max-height: 500px;
     max-width: 100%;
+    border: 15px ridge goldenrod;
 }
-#AboutMeText {
+#AboutMeTextDiv {
     width: 55%;
     height: 500px;
     border: 4px solid goldenrod;
@@ -140,6 +111,6 @@ i {
     margin-bottom: 40px;
     float: right;
 }
-#AboutMeHeading {
-    text-align: center;
+#AboutMeText {
+    margin: 20px;
 }
