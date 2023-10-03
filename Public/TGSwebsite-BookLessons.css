@@ -1,0 +1,59 @@
+#booking {
+    display: flex;
+    width: 900px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    justify-content: center;
+    border: 4px solid goldenrod;
+}
+
+#contact {
+    display: flex 2;
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-self: center;
+}
+
+#FirstName, #LastName, .PhoneNumber, #email {
+    margin-bottom: 10px;
+    font-family: 'Times New Roman';
+}
+
+.calendly-inline-widget {
+    display: flex;
+    width: 50%;
+    height: fit-content;
+    align-self: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+legend {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#PhoneNumber {
+    width: 150px;
+}
+
+#email {
+    width: 300px;
+}
+
+#EmailCheckbox {
+    margin-right: 20px;
+}
+
+#ContactMethod {
+    display: flex;
+    justify-content: center;
+}
+
+i {
+    margin-right: 5px;
+}
