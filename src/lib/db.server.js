@@ -28,6 +28,11 @@ export async function addTutorial(newTutorial) {
 }
 
 export async function getAllTutorials() {
-	const tutorialsList = tutorials.find({},"title").lean();
+	const tutorialsList = tutorials.find({},"title category subcategory").lean();
 	return tutorialsList;
+}
+
+export async function getTutorial(id) {
+	const tutorial = tutorials.findById(id).lean();
+	return tutorial;
 }
