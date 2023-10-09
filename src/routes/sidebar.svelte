@@ -78,7 +78,7 @@
 	}
 
 	#close {
-		color: white;	
+		color: white;
 	}
 
 	aside {

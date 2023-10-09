@@ -1,35 +1,45 @@
 // @ts-nocheck
-import mongoose from "mongoose";
-import {dataBaseURI} from "$env/static/private";
+import mongoose from 'mongoose';
+import { dataBaseURI } from '$env/static/private';
 
 //Connects to database
 connectToDatabase().catch((ex) => {
-	console.error(ex)
-})
+	console.error(ex);
+});
 async function connectToDatabase() {
-	await mongoose.connect(dataBaseURI)
-	console.log("Connected to database");
+	await mongoose.connect(dataBaseURI);
+	console.log('Connected to database');
 }
 
 //Create tutorials schema
 const tutorialsSchema = new mongoose.Schema({
-	title:{type:String,required:true,unique:true},
-	category:{type:String,required:true},
-	subcategory:{type:String,required:true},
-	content:{type:String,required:true},
+	title: { type: String, required: true, unique: true },
+	category: { type: String, required: true },
+	subcategory: { type: String, required: true },
+	content: { type: String, required: true }
 });
 
 //Creates tutorials model
-const tutorials = mongoose.model("tutorials",tutorialsSchema);
+const tutorials = mongoose.model('tutorials', tutorialsSchema);
 
 export async function addTutorial(newTutorial) {
-	await tutorials.create(newTutorial)
-	console.log("Tutorial added")
+	await tutorials.create(newTutorial);
+	console.log('Tutorial added');
+}
+
+export async function deleteTutorial(id) {
+	console.log(id);
+	await tutorials.findByIdAndDelete(id).lean();
 }
 
 export async function getAllTutorials() {
-	const tutorialsList = tutorials.find({},"title category subcategory").lean();
+	const tutorialsList = tutorials.find({}, 'title category subcategory').lean();
 	return tutorialsList;
+}
+
+export async function getCategoryInfo() {
+	const categoryInfo = await tutorials.find({}, 'category subcategory').lean();
+	return categoryInfo;
 }
 
 export async function getTutorial(id) {
